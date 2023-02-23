@@ -1,0 +1,386 @@
+.container {
+    color: rgb(11, 193, 65);
+    width: 100%;
+    background-color: aquamarine;
+    align-content: space-evenly;
+    display: flex;
+    justify-content: space-evenly;
+    height: auto;
+}
+
+/* can be used as footer */
+.containertwo {
+    background-color: orange;
+    width: 100%;
+    height: auto;
+    display: flex;
+    float: left;
+
+}
+
+#logos {
+    border: 3px solid rgba(64, 45, 170, );
+    height: 33px;
+    background: url('../static/images/logo.jpeg');
+    width: 50px;
+    display: flex;
+    justify-content: flex-start;
+    margin: 11px, 11px, 11px, 11px;
+    top: 1px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    position: relative;
+    font-size: 30px;
+    font-weight: 700;
+    color: orange;
+
+
+}
+
+.main {
+    border: solid 3px blue;
+    height: 200px;
+    width: 100px;
+}
+
+.maintwo {
+    border: solid 3px blue;
+    height: 200px;
+    width: 100px;
+    right: 100px;
+    position: left;
+
+}
+
+h1 {
+    border: 3px, solid;
+    color: blue
+}
+
+header {
+    background-color: pink;
+    height: auto;
+    width: 100%;
+    font: 1em sans-serif;
+    border: 3px solid limegreen;
+    list-style: none;
+    text-decoration: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background: transparent;
+
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+* :root {
+    --header-height: 4rem;
+    --first-color: #a4fcbe;
+    --first-color-dark: #aac157;
+    --white-color: #fcf8f8;
+    --big-font-sixe: 2.5rem;
+    --normal-font-size: 2.5rem;
+    --z-fixed: 100;
+    --body-font: 'Poppins', sans-serif;
+    --big-font-size: 2.5rem;
+    --normal-font-size: 2.5rem;
+
+}
+
+@media screen and(min-width:768px) {
+    :root {
+        --big--font-size: 5rem;
+        --normal0-font-size: 1rem
+    }
+}
+
+@media (max-width: 1535px) {
+    header {
+        padding: 15px 3%;
+        transition: .2s;
+    }
+
+    .icons {
+        padding: 0 3%;
+        transition: .2s;
+
+    }
+
+    .scroll-down {
+        right: 3%;
+        transition: .2s;
+    }
+}
+
+@media (max-width:1460 px) {
+    section {
+        padding: 0 12%;
+        transition: .2s;
+
+    }
+}
+
+@media(max-width: 1340px) {
+    .hero-img img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .hero-text h1 {
+        font-size: 75px;
+        margin: 0 0 30px;
+    }
+
+    .hero-text h5 {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width:1195px) {
+    section {
+        padding: 0 3%;
+        transition: 3s;
+    }
+
+    .hero-text {
+        padding-top: 115px;
+    }
+
+    .hero-img {
+        text-align: center;
+    }
+
+    .hero-img img {
+        width: 560px;
+        height: auto;
+    }
+
+    .hero {
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .scroll-down {
+        display: none;
+    }
+}
+
+@media (max-width: 990px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navlist {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 40vh;
+        background: #4d9559;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+    }
+
+    .navlist a {
+        display: block;
+        margin: 10px 0;
+        margin-left: 0;
+    }
+
+    .navlist.open {
+        right: 0;
+    }
+}
+
+@media (max-width:680px) {
+    .hero-img img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: var(--header-height) 0 0 0;
+    padding: 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+    background-color: black;
+
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    color: white;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all .55s ease;
+}
+
+.navlist a:hover {
+    border-bottom: 2px solid white;
+
+}
+
+#menu-icon {
+    color: white;
+    font-size: 35px;
+    z-index: 1001;
+    cursor: pointer;
+}
+
+.hero {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(245.59deg, #4d9559 0%, #38703d 28.53%, #133917 75.52%);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+section {
+    padding: 0 19%;
+}
+
+.hero-text h5 {
+    font-size: 14px;
+    font-weight: 400;
+    color: greenyellow;
+    margin-bottom: 40px;
+}
+
+.hero-text h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 90px;
+    line-height: 1;
+    color: white;
+    margin: 0 0 45px;
+}
+
+.hero-text h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #aac157;
+    margin-bottom: 10px;
+}
+
+.hero-txt p {
+    color: white;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+
+.hero-img img {
+    width: 500px;
+    height: auto;
+
+}
+
+.hero-text a {
+    display: inline-block;
+    color: white;
+    background: #4d9559;
+    border: 1px solid transparent;
+    padding: 12px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .55s ease;
+}
+
+.hero-text a:hover {
+    background: transparent;
+    border: 1px solid white;
+    transform: translateX(8px);
+}
+
+.hero-text a.ctaa {
+    background: transparent;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+
+.hero-text a.ctaa i {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.icons {
+    position: absolute;
+    top: 50%;
+    padding: 0 9%;
+    transform: translateY(-50%);
+}
+
+.icons i {
+    display: block;
+    margin: 26px 0;
+    font-size: 25px;
+    color: white;
+    transition: all .50s ease;
+}
+
+.icons i:hover {
+    color: #4d9559;
+    transform: translateY(-5px);
+
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 6%;
+    right: 9%;
+
+}
+
+.scroll-down i {
+    display: block;
+    padding: 12px;
+    font-size: 25px;
+    color: white;
+    background: #4d9559;
+    border-radius: 30px;
+    transition: all .50s ease;
+}
+
+.scroll-down i:hover {
+    transform: trasnlateY(-5px);
+}
